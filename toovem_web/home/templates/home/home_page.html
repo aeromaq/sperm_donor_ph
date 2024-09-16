@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+{% endblock extra_css %}
+
+
+
+<!-- replace everything below with: -->
+
+{% load wagtailcore_tags %}
+
+{% block content %}
+{{ page.body|richtext }}
+{% include 'home/welcome_page.html' %}
+
+{% endblock content %}
+
+
